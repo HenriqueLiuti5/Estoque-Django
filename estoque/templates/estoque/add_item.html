@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Produto | Estoque Verdão</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Centralização e Estilo dos Inputs */
+        form p { margin-bottom: 1.5rem; text-align: center; }
+        
+        label { 
+            display: block; 
+            font-size: 0.9rem; 
+            font-weight: 600; 
+            color: #166534; /* green-800 */
+            margin-bottom: 0.5rem; 
+            text-align: center;
+        }
+        
+        input[type="text"], input[type="number"], textarea, select { 
+            width: 100%; 
+            padding: 0.75rem 1rem; 
+            border: 2px solid #e5e7eb; /* gray-200 */
+            border-radius: 9999px; /* Pill shape para inputs */
+            outline: none; 
+            transition: all 0.2s; 
+            background-color: #f9fafb; 
+            text-align: center; /* O QUE VOCÊ ESCREVE FICA NO MEIO */
+            font-weight: 500;
+            color: #1f2937;
+        }
+        
+        /* Textarea com borda normal (pill shape fica ruim em textarea) */
+        textarea { 
+            border-radius: 1.5rem; 
+            min-height: 120px; 
+            resize: vertical; 
+        }
+        
+        input:focus, textarea:focus { 
+            background-color: #fff;
+            border-color: #16a34a; /* green-600 */
+            box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1); 
+        }
+        
+        .helptext { display:none; } /* Esconde textos de ajuda padrão do Django pra limpar o visual */
+    </style>
+</head>
+<body class="bg-green-50 min-h-screen flex flex-col justify-center items-center px-4 py-10">
+
+    <div class="w-full max-w-lg">
+        <div class="bg-white py-12 px-8 shadow-2xl rounded-3xl border border-green-100 text-center relative overflow-hidden">
+            
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 to-green-700"></div>
+
+            <div class="mb-10 flex flex-col items-center">
+                <div class="h-16 w-16 bg-green-100 text-green-700 rounded-full flex items-center justify-center mb-4 shadow-sm">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">Produto</h2>
+                <p class="text-sm text-gray-500 mt-2">Insira as informações abaixo</p>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                
+                <div class="space-y-4">
+                    {{ form.as_p }}
+                </div>
+
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                    <button type="submit" class="order-1 sm:order-2 w-full sm:w-auto px-8 py-3 rounded-full shadow-lg text-sm font-bold text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition transform hover:-translate-y-0.5">
+                        Salvar Produto
+                    </button>
+                    <a href="{% url 'home' %}" class="order-2 sm:order-1 w-full sm:w-auto px-8 py-3 border border-gray-300 rounded-full shadow-sm text-sm font-bold text-gray-600 bg-white hover:bg-gray-50 hover:text-gray-800 transition">
+                        Cancelar
+                    </a>
+                </div>
+            </form>
+        </div>
+        
+        <p class="text-center text-xs text-green-700/50 mt-8 font-medium">
+            &copy; 2026 Sistema Palmeiras
+        </p>
+    </div>
+
+</body>
+</html>

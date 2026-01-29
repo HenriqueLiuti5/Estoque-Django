@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Corporativo | VerOnline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Inputs Customizados Profissionais */
+        input { 
+            width: 100%; padding: 0.875rem 1rem; 
+            border: 1px solid #e2e8f0; border-radius: 0.5rem; 
+            outline: none; transition: all 0.2s; background-color: #f8fafc;
+            color: #1e293b; font-weight: 500;
+        }
+        
+        input:focus { 
+            border-color: #15803d; /* green-700 */
+            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(21, 128, 61, 0.1); 
+        }
+
+        label {
+            display: block; font-size: 0.875rem; font-weight: 600; 
+            color: #475569; margin-bottom: 0.5rem;
+        }
+
+        form p { margin-bottom: 1.25rem; }
+    </style>
+</head>
+<body class="h-screen flex w-full bg-white overflow-hidden">
+
+    <div class="hidden md:flex md:w-1/2 lg:w-5/12 bg-green-800 flex-col justify-between p-12 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-green-600 opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-green-400 opacity-20 blur-3xl"></div>
+
+        <div class="relative z-10">
+            <div class="flex items-center gap-3 text-white/90">
+                <div class="p-2 bg-white/10 rounded-lg backdrop-blur-sm">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                </div>
+                <span class="font-bold tracking-wide">VERONLINE SYSTEM</span>
+            </div>
+        </div>
+
+        <div class="relative z-10 text-white">
+            <h2 class="text-4xl font-bold mb-4 leading-tight">Controle total do seu estoque com eficiência.</h2>
+            <p class="text-green-100 text-lg font-light">Gerencie entradas, saídas e produtos com a plataforma líder do mercado.</p>
+        </div>
+
+        <div class="relative z-10 text-green-200 text-sm">
+            &copy; 2026 VerOnline Inc. Todos os direitos reservados.
+        </div>
+    </div>
+
+    <div class="w-full md:w-1/2 lg:w-7/12 flex items-center justify-center p-8 bg-white">
+        <div class="w-full max-w-md space-y-8">
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900">Acesse sua conta</h2>
+                <p class="mt-2 text-sm text-gray-500">Bem-vindo de volta! Por favor, insira seus dados.</p>
+            </div>
+
+            <form method="post" class="mt-8 space-y-6">
+                {% csrf_token %}
+                
+                <div class="space-y-4">
+                    {{ form.as_p }}
+                </div>
+
+                <button type="submit" class="group relative flex w-full justify-center rounded-lg bg-green-700 py-3 px-4 text-sm font-bold text-white hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200 shadow-md hover:shadow-lg">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <svg class="h-5 w-5 text-green-500 group-hover:text-green-400 transition" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    Entrar no Sistema
+                </button>
+            </form>
+
+            <p class="text-center text-xs text-gray-400 mt-6">
+                Protegido por criptografia de ponta a ponta.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
