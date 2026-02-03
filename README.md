@@ -1,87 +1,89 @@
 <div align="center">
 
-# 📦 VerOnline Estoque
+# 📦 Inventory
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![Badge Development](http://img.shields.io/static/v1?label=STATUS&message=IN%20DEVELOPMENT&color=GREEN&style=for-the-badge)
 <br>
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 <p align="center">
-  <b>Sistema corporativo para gerenciamento de inventário e controle de estoque.</b><br>
-  Foco em performance, segurança e UX moderna.
+  <b>Corporate system for inventory management and stock control.</b><br>
+  Focus on performance, security, and modern UX.
 </p>
 
 </div>
 
 ---
 
-## 💻 Sobre o Projeto
+## 💻 About the Project
 
-O **VerOnline Estoque** é uma aplicação web desenvolvida para simplificar o controle de produtos em pequenas e médias empresas. 
+**Inventory** is a web application developed to simplify product control in small and medium-sized businesses.
 
-Diferente de sistemas administrativos comuns, este projeto foca em uma **Experiência de Usuário (UX)** de alto nível, utilizando **Tailwind CSS** processado localmente para máxima performance e um design limpo e responsivo.
-
----
-
-## ✨ Funcionalidades
-
-- **🔐 Autenticação Segura**: Login e proteção de rotas (@login_required).
-- **📦 Gestão de Produtos (CRUD)**: Adicionar, Listar, Editar e Excluir.
-- **🛡️ Segurança Extra**: Exclusão com **Modal de Confirmação** para evitar erros.
-- **🔍 Busca Inteligente**: Filtragem rápida na dashboard com botão de limpeza (UX).
-- **🎨 UI Profissional**: Design System próprio com cores da marca ("Verde Verdão").
-- **📱 Responsividade**: Funciona no Desktop e Mobile.
+Unlike common administrative systems, this project focuses on a high-level **User Experience (UX)**, using locally processed **Tailwind CSS** for maximum performance and a clean, responsive design.
 
 ---
 
-## 🚀 Como Executar
+## ✨ Features
+
+- **🔐 Secure Authentication**: Login and route protection (@login_required).
+- **📦 Product Management (CRUD)**: Add, List, Edit, and Delete.
+- **🛡️ Extra Security**: Deletion with **Confirmation Modal** to prevent errors.
+- **🔍 Smart Search**: Fast filtering on the dashboard with a clear button (UX).
+- **🎨 Professional UI**: Custom Design System with brand colors ("Verdão Green").
+- **📱 Responsiveness**: Works on Desktop and Mobile.
+
+---
+
+## 🚀 How to Run
 
 ```bash
-# 1. Clone o repositório
+# 1. Clone the repository
 $ git clone https://github.com/HenriqueLiuti5/Estoque-Django.git
 
-# 2. Entre na pasta
+# 2. Enter the folder
 $ cd Estoque-Django
 
-# 3. Crie e ative o ambiente virtual
+# 3. Create and activate the virtual environment
 $python -m venv venv$ venv\Scripts\activate  # Windows
 
-# 4. Instale as dependências
+# 4. Install dependencies
 $ pip install -r requirements.txt
 
-# 5. Prepare o Banco de Dados
+# 5. Prepare the Database
 $ python manage.py migrate
 
-# 6. Crie o Administrador
+# 6. Create the Administrator
 $ python manage.py createsuperuser
 
-# 7. Rode o servidor
+# 7. Run the server
 $ python manage.py runserver
 ```
-Acesse: `http://127.0.0.1:8000`
+
+Access: `http://127.0.0.1:8000`
 
 ---
 
-## ⚙️ Tailwind (Desenvolvimento)
+## ⚙️ Tailwind (Development)
 
-O CSS é gerado localmente (sem dependência de CDN online). Para editar os estilos:
+CSS is generated locally (without online CDN dependency). To edit styles:
 
 ```bash
-# Instale as dependências do Node (se necessário)
+# Install Node dependencies (if necessary)
 $ npm install
 
-# Rode o observador do Tailwind
+# Run the Tailwind watcher
 $ npx tailwindcss -i ./static/src/input.css -o ./static/css/output.css --watch
 ```
+---
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob a licença MIT.
+This project is under the MIT license.
 
 ---
 
 <div align="center">
-  <sub>Feito por Henrique Liuti</sub>
+  <sub>Made by Henrique Liuti</sub>
 </div>
