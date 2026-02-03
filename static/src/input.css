@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  form label {
+    @apply block text-sm font-medium text-slate-700 mb-1.5 text-left;
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="password"],
+  form input[type="email"],
+  form select,
+  form textarea {
+    @apply block w-full rounded-md border-0 py-2.5 px-3.5 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 transition-all duration-150 ease-in-out sm:text-sm sm:leading-6 bg-white;
+  }
+
+  form input:focus,
+  form select:focus,
+  form textarea:focus {
+    @apply outline-none ring-2 ring-inset ring-brand-600;
+  }
+
+  form p {
+    @apply mb-5;
+  }
+  
+  .helptext {
+    @apply mt-1 block text-xs text-slate-500 text-left;
+  }
+}
