@@ -17,20 +17,6 @@
 
 ---
 
-## 📸 Screenshots
-
-> **Dica:** Um projeto visual vale mais que mil linhas de código. Veja como o sistema se comporta:
-
-| 🔐 Login Seguro | 📊 Dashboard Intuitiva |
-|:---:|:---:|
-| ![Login](LINK_DA_IMAGEM_LOGIN_AQUI) | ![Home](LINK_DA_IMAGEM_HOME_AQUI) |
-
-| ➕ Adicionar Itens | 🗑️ Modal de Segurança |
-|:---:|:---:|
-| ![Form](LINK_DA_IMAGEM_ADD_AQUI) | ![Modal](LINK_DA_IMAGEM_MODAL_AQUI) |
-
----
-
 ## 💻 Sobre o Projeto
 
 O **VerOnline Estoque** é uma aplicação web desenvolvida para simplificar o controle de produtos em pequenas e médias empresas. 
